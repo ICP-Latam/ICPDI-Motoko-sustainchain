@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "sustainchain_backend": {
+      "main": "src/sustainchain_backend/main.mo",
+      "type": "motoko"
+    },
+    "sustainchain_frontend": {
+      "dependencies": [
+        "sustainchain_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/sustainchain_frontend/src/index.html"
+      },
+      "source": [
+        "src/sustainchain_frontend/assets",
+        "dist/sustainchain_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
